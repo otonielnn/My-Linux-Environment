@@ -1,5 +1,5 @@
-# My Linux Script Environment
-This is my current OS and How is my workspace
+# My Linux WorkSpace 💻🧑🏽‍💻
+This is my current OS and How is my workspace.
 ![Neofetch](assets/img/ubuntu.png)
 
 ## Shell
@@ -44,6 +44,7 @@ After that you can just search for **gnome tweaks** on the menu
 
 ## Script
 ### Tools
+- `Zsh` with `Oh My Zsh` and plugins
 - `Curl`
 - `JDK`
 - `VsCode`

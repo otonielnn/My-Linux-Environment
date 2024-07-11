@@ -7,6 +7,21 @@ sudo apt install git -y
 sudo apt install curl -y
 sudo apt install snapd -y
 
+echo -e "\e[34;1mBaixando e Instalando o Zsh e Oh My Zsh...\e[0m"
+sudo apt install zsh -y
+sudo chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo -e "\e[34;1mBaixando e Instalando o Plugins do Oh My Zsh...\e[0m"
+git clone https://github.com/z-shell/F-Sy-H ~/path/to/f-sy-h
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+echo 'export ZSH="$HOME/.oh-my-zsh"' > ~/.zshrc
+echo 'ZSH_THEME="robbyrussell"' >> ~/.zshrc
+echo 'plugins=(git zsh-autosuggestions)' >> ~/.zshrc
+echo 'source $ZSH/oh-my-zsh.sh' >> ~/.zshrc
+echo 'source ~/path/to/f-sy-h/F-Sy-H.plugin.zsh' >> ~/.zshrc
+
 echo -e "\e[34;1mBaixando e Instalando o Java...\e[0m"
 sudo apt install openjdk-21-jdk-headless -y
 
