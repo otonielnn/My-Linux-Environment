@@ -7,17 +7,21 @@ I'm currently using the `ZSH` with `Oh My Zsh`
 
 ### installation
 - [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+
     ```bash
     sudo apt install zsh
     ```
 - [Oh My Zsh](https://ohmyz.sh/)
+
     ```bash
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
 ### Oh My Zsh plugins
 - [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
+
     > syntax highlighting for commands typed interactively in the terminal
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+
     > It suggests commands as you type based on history and completions.
 
 ## GUI Personalization
@@ -40,7 +44,8 @@ After that you can just search for **gnome tweaks** on the menu
 
 ## Script
 ### Tools
+- `Curl`
 - `JDK`
 - `VsCode`
-- `Node`
+- `nvm` and `Node`
 - `Docker`
