@@ -1,15 +1,16 @@
 #!/bin/bash
 
 echo -e "\e[34;1mAtualizando o Sistema...\e[0m"
-apt-get update
-apt-get upgrade -y
+sudo apt update
+sudo apt upgrade -y
 sudo apt install git -y
 sudo apt install curl -y
 sudo apt install snapd -y
 
 echo -e "\e[34;1mBaixando e Instalando o Zsh e Oh My Zsh...\e[0m"
 sudo apt install zsh -y
-sudo chsh -s $(which zsh)
+echo "0" | zsh-newuser-install
+echo "y" | chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo -e "\e[34;1mBaixando e Instalando o Plugins do Oh My Zsh...\e[0m"
