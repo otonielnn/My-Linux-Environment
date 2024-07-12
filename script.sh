@@ -18,11 +18,11 @@ if ! command -v git &> /dev/null; then
     echo -e "\e[34;1mInstalando Git...\e[0m"  && sleep 2
     sudo apt install git -y
     if [ $? -ne 0 ]; then
-        echo -e "\e[31mErro ao instalar o Curl. Abortando...\e[0m"
+        echo -e "\e[31mErro ao instalar o Git. Abortando...\e[0m"
         exit 1
     fi
     else
-        echo -e "\e[33mO Curl já está instalado..\e[0m"  && sleep 1
+        echo -e "\e[33mO Git já está instalado..\e[0m"  && sleep 1
 fi
 
 echo -e "\e[34;1mInstalando ZSH...\e[0m"  && sleep 2
@@ -31,7 +31,6 @@ sudo apt install zsh -y
 echo -e "\e[34;1mInstalando Oh My Zsh...\e[0m"  && sleep 2
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo "0" | zsh-newuser-install
-echo "y" | chsh -s $(which zsh)
 
 echo -e "\e[34;1mInstalando o Plugins do Oh My Zsh...\e[0m"  && sleep 2
 git clone https://github.com/z-shell/F-Sy-H ~/path/to/f-sy-h
