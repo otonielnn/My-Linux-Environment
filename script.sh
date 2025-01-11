@@ -42,8 +42,10 @@ echo 'plugins=(git zsh-autosuggestions)' >> ~/.zshrc
 echo 'source $ZSH/oh-my-zsh.sh' >> ~/.zshrc
 echo 'source ~/path/to/f-sy-h/F-Sy-H.plugin.zsh' >> ~/.zshrc
 
-echo -e "\e[34;1mInstalando o Java...\e[0m" && sleep 2
-sudo apt install openjdk-21-jdk-headless -y
+echo -e "\e[34;1mInstalando o Java e Maven...\e[0m" && sleep 2
+curl -s "https://get.sdkman.io" | bash
+sdk install maven 3.9.9
+sdk install java 21.0.5-amzn
 
 echo -e "\e[34;1mInstalando VsCode...\e[0m" && sleep 2
 sudo snap install --classic code
@@ -57,5 +59,6 @@ nvm install --lts
 echo -e "\e[34;1mBaixando e Instalando docker...\e[0m" && sleep 2
 sudo apt install docker.io docker-compose -y
 sudo systemctl enable --now docker docker.socket containerd
+sudo usermod -aG docker $USER\n
 
 echo -e "\e[32;1mFinalizado Instalações!!!\e[0m" && sleep 3
